@@ -127,9 +127,7 @@ fun getBookPriceCalculator(bookPrices: Map<BookInfo, Double>): (BookInfo) -> Dou
 fun createOrder(items: List<Item>): Order {
     val grossAmount = items.sumByDouble { it.priceWithTax }
 
-    val (greenTax, _) = calculatePrice(grossAmount, 2.5)
-
-    val netAmount = grossAmount + greenTax
+    val (netAmount, greenTax) = calculatePrice(grossAmount, 2.5)
 
     return Order(items, grossAmount, greenTax, netAmount)
 }
@@ -160,7 +158,6 @@ fun main() {
     val getCartItemCurried = ::getItem.curried()
 
     val bookPriceCalculator = getBookPriceCalculator(bookPrices)
-
 
     val taxCalculator =
         { category: String, price: Double -> (::getTax andThen ::calculatePrice.curried()(price))(category) }
