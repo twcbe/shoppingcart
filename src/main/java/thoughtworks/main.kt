@@ -1,6 +1,3 @@
-import org.funktionale.currying.*
-import org.funktionale.composition.*
-
 object Constants {
     const val Book = "Book"
     const val Electronics = "Electronics"
@@ -14,19 +11,16 @@ object Constants {
 
 data class Product(val id: String, val name: String, val price: Double, val category: String)
 
-data class Item(
-    val product: Product,
-    val quantity: Int,
-    val price: Double,
-    val tax: Double,
-    val priceWithTax: Double
-)
-
 data class BookInfo(val bookType: String, val format: String)
 
 data class UserSelectedProduct(val product: Product, val quantity: Int, val bookInfo: BookInfo? = null)
 
-data class Order(val items: List<Item>, val grossAmount: Double, val greenTax: Double, val netAmount: Double)
+data class Item(
+    val product: Product,
+    val quantity: Int,
+    val price: Double
+)
+
 
 fun main() {
 
@@ -50,21 +44,9 @@ fun main() {
     )
 
     val userSelectedProducts = getProductsFromUser(catalog, emptyArray())
+    
+    val items = userSelectedProducts.map { getItem(bookPrices, it) }
 
-    val getCartItemCurried = ::getItem.curried()
-
-    val bookPriceCalculator = getBookPriceCalculator(bookPrices)
-
-    val taxCalculator =
-        { category: String, price: Double -> (::getTax andThen ::calculatePrice.curried()(price))(category) }
-
-    val mapItem: (UserSelectedProduct) -> Item = getCartItemCurried(bookPriceCalculator)(taxCalculator)
-
-    val items = userSelectedProducts.map(mapItem)
-
-    val order = createOrder(items)
-
-    println(order.netAmount)
 
 }
 
@@ -119,54 +101,18 @@ tailrec fun promptUser(prompt: String = "", validValues: List<String> = emptyLis
 }
 
 fun getItem(
-    bookPriceCalculator: (BookInfo) -> Double,
-    taxCalculator: (String, Double) -> Pair<Double, Double>,
+    bookPrices: Map<BookInfo, Double>,
     userSelectedProduct: UserSelectedProduct
 ): Item {
 
-    val unitPrice = if (userSelectedProduct.product.isBook())
-        userSelectedProduct.product.price + bookPriceCalculator(userSelectedProduct.bookInfo!!)
-    else userSelectedProduct.product.price
+    val unitPrice =
+        if (userSelectedProduct.product.isBook()) {
+            val bookPrice = bookPrices.entries.first { it.key == userSelectedProduct.bookInfo!! }.value
+            userSelectedProduct.product.price + bookPrice
+        } else userSelectedProduct.product.price
 
-    val price = getTotalPrice(
-        unitPrice,
-        userSelectedProduct.quantity
-    )
+    val price = unitPrice * userSelectedProduct.quantity
 
-    val (priceWithTax, tax) = taxCalculator(userSelectedProduct.product.category, price)
-
-    return Item(userSelectedProduct.product, userSelectedProduct.quantity, price, tax, priceWithTax)
+    return Item(userSelectedProduct.product, userSelectedProduct.quantity, price)
 
 }
-
-fun getTotalPrice(unitPrice: Double, quantity: Int) = unitPrice * quantity
-
-fun getTax(category: String): Double = when (category) {
-    Constants.Electronics -> 2.5
-    Constants.Book -> 0.5
-    else -> 0.0
-}
-
-fun calculatePrice(price: Double, percentage: Double): Pair<Double, Double> {
-    val percent = price * (percentage / 100)
-    val total = price + percent
-    return Pair(total, percent)
-}
-
-fun getBookPriceCalculator(bookPrices: Map<BookInfo, Double>): (BookInfo) -> Double {
-
-    fun getAdditionalPriceForBook(bookPrices: Map<BookInfo, Double>, bookInfo: BookInfo) =
-        bookPrices.entries.first { it.key == bookInfo }.value
-
-    return ::getAdditionalPriceForBook.curried()(bookPrices)
-}
-
-fun createOrder(items: List<Item>): Order {
-    val grossAmount = items.sumByDouble { it.priceWithTax }
-
-    val (netAmount, greenTax) = calculatePrice(grossAmount, 2.5)
-
-    return Order(items, grossAmount, greenTax, netAmount)
-}
-
-
