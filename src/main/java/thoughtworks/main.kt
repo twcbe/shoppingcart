@@ -1,5 +1,4 @@
 import org.funktionale.currying.*
-import org.funktionale.composition.*
 
 object Constants {
     const val Book = "Book"
@@ -55,16 +54,14 @@ fun main() {
 
     val bookPriceCalculator = getBookPriceCalculator(bookPrices)
 
-    val taxCalculator =
-        { category: String, price: Double -> (::getTax andThen ::calculatePrice.curried()(price))(category) }
+    val taxCalculator = { category: String, price: Double ->
+        calculatePrice(price, getTax(category))
+    }
 
-    val mapItem: (UserSelectedProduct) -> Item = getCartItemCurried(bookPriceCalculator)(taxCalculator)
+    val mapItem: (UserSelectedProduct) -> Item =
+        getCartItemCurried(bookPriceCalculator)(taxCalculator)
 
     val items = userSelectedProducts.map(mapItem)
-
-    val order = createOrder(items)
-
-    println(order.netAmount)
 
 }
 
@@ -159,13 +156,3 @@ fun getAdditionalPriceForBook(bookPrices: Map<BookInfo, Double>, bookInfo: BookI
 
 fun getBookPriceCalculator(bookPrices: Map<BookInfo, Double>): (BookInfo) -> Double =
     ::getAdditionalPriceForBook.curried()(bookPrices)
-
-fun createOrder(items: List<Item>): Order {
-    val grossAmount = items.sumByDouble { it.priceWithTax }
-
-    val (netAmount, greenTax) = calculatePrice(grossAmount, 2.5)
-
-    return Order(items, grossAmount, greenTax, netAmount)
-}
-
-
