@@ -64,7 +64,7 @@ fun main() {
 
     val order = createOrder(items)
 
-    println(order.netAmount)
+    println("${order.grossAmount} ${order.netAmount}")
 
 }
 

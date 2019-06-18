@@ -18,8 +18,8 @@
       <file leaf-file-name="main.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="161" selection-start-line="161" selection-end-line="161" />
+            <state relative-caret-position="345">
+              <caret line="66" column="54" lean-forward="true" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
               <folding>
                 <element signature="e#0#70#0" expanded="true" />
               </folding>
@@ -40,6 +40,7 @@
       <find>getCartItem</find>
       <find>getProduct</find>
       <find>println</find>
+      <find>order</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -579,8 +580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
+        <state relative-caret-position="345">
+          <caret line="66" column="54" lean-forward="true" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
           <folding>
             <element signature="e#0#70#0" expanded="true" />
           </folding>
