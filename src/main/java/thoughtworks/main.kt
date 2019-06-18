@@ -1,6 +1,17 @@
 import org.funktionale.currying.*
 import org.funktionale.composition.*
 
+object Constants {
+    const val Book = "Book"
+    const val Electronics = "Electronics"
+    const val EBook = "EBook"
+    const val Paperback = "Paperback"
+    const val Kindle = "Kindle"
+    const val Pdf = "Pdf"
+    const val Hardcover = "Pdf"
+    const val Softcover = "Softcover"
+}
+
 data class Product(val id: String, val name: String, val price: Double, val category: String)
 
 data class Item(
@@ -16,17 +27,6 @@ data class BookInfo(val bookType: String, val format: String)
 data class UserSelectedProduct(val product: Product, val quantity: Int, val bookInfo: BookInfo? = null)
 
 data class Order(val items: List<Item>, val grossAmount: Double, val greenTax: Double, val netAmount: Double)
-
-object Constants {
-    const val Book = "Book"
-    const val Electronics = "Electronics"
-    const val EBook = "EBook"
-    const val Paperback = "Paperback"
-    const val Kindle = "Kindle"
-    const val Pdf = "Pdf"
-    const val Hardcover = "Pdf"
-    const val Softcover = "Softcover"
-}
 
 tailrec fun promptUser(prompt: String = "", validValues: List<String> = emptyList()): String {
     println(prompt)
