@@ -26,8 +26,6 @@ data class BookInfo(val bookType: String, val format: String)
 
 data class UserSelectedProduct(val product: Product, val quantity: Int, val bookInfo: BookInfo? = null)
 
-data class Order(val items: List<Item>, val grossAmount: Double, val greenTax: Double, val netAmount: Double)
-
 fun main() {
 
     val catalog = listOf(
@@ -62,9 +60,6 @@ fun main() {
 
     val items = userSelectedProducts.map(mapItem)
 
-    val order = createOrder(items)
-
-    println(order.netAmount)
 
 }
 
@@ -159,13 +154,5 @@ fun getAdditionalPriceForBook(bookPrices: Map<BookInfo, Double>, bookInfo: BookI
 
 fun getBookPriceCalculator(bookPrices: Map<BookInfo, Double>): (BookInfo) -> Double =
     ::getAdditionalPriceForBook.curried()(bookPrices)
-
-fun createOrder(items: List<Item>): Order {
-    val grossAmount = items.sumByDouble { it.priceWithTax }
-
-    val (netAmount, greenTax) = calculatePrice(grossAmount, 2.5)
-
-    return Order(items, grossAmount, greenTax, netAmount)
-}
 
 
