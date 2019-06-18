@@ -153,13 +153,12 @@ fun calculatePrice(price: Double, percentage: Double): Pair<Double, Double> {
     return Pair(total, percent)
 }
 
-fun getBookPriceCalculator(bookPrices: Map<BookInfo, Double>): (BookInfo) -> Double {
 
-    fun getAdditionalPriceForBook(bookPrices: Map<BookInfo, Double>, bookInfo: BookInfo) =
-        bookPrices.entries.first { it.key == bookInfo }.value
+fun getAdditionalPriceForBook(bookPrices: Map<BookInfo, Double>, bookInfo: BookInfo) =
+    bookPrices.entries.first { it.key == bookInfo }.value
 
-    return ::getAdditionalPriceForBook.curried()(bookPrices)
-}
+fun getBookPriceCalculator(bookPrices: Map<BookInfo, Double>): (BookInfo) -> Double =
+    ::getAdditionalPriceForBook.curried()(bookPrices)
 
 fun createOrder(items: List<Item>): Order {
     val grossAmount = items.sumByDouble { it.priceWithTax }
