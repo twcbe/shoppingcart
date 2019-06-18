@@ -16,7 +16,7 @@ data class Product(val id: String, val name: String, val price: Double, val cate
 
 data class BookInfo(val bookType: String, val format: String)
 
-data class UserSelectedProduct(val product: Product, val quantity: Int, val bookInfo: BookInfo? = null)
+data class UserSelectedProduct(val product: Product, val quantity: Int)
 
 fun main() {
 
@@ -57,35 +57,13 @@ fun getUserSelectedProduct(catalog: Collection<Product>): UserSelectedProduct {
     val product = getProduct(catalog, promptUser("Enter the product id wish for", catalog.map {
         it.id
     }))
-    return UserSelectedProduct(product, 1, if (product.isBook()) getBookInfo() else null)
+    return UserSelectedProduct(product, 1)
 }
-
-fun Product.isBook() = this.category == "Book"
 
 fun getProduct(catalog: Collection<Product>, productId: String) = catalog.first { it.id == productId }
 
 fun isUserRequireMoreProducts(): Boolean =
     promptUser("Enter C to add more products, X to Complete", listOf("C", "X")) == "C"
-
-tailrec fun getBookInfo(): BookInfo =
-    when (promptUser("Enter E for EBook, P for Paperback", listOf("E", "P"))) {
-        "E" -> BookInfo(
-            Constants.EBook, when (promptUser("Enter K for kindle, P for Pdf", listOf("K", "P"))) {
-                "K" -> Constants.Kindle
-                "P" -> Constants.Pdf
-                else -> ""
-            }
-        )
-
-        "P" -> BookInfo(
-            Constants.Paperback, when (promptUser("Enter H for Hardcover, S for Softcover", listOf("H", "S"))) {
-                "H" -> Constants.Hardcover
-                "S" -> Constants.Softcover
-                else -> ""
-            }
-        )
-        else -> getBookInfo()
-    }
 
 tailrec fun promptUser(prompt: String = "", validValues: List<String> = emptyList()): String {
     println(prompt)
