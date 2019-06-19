@@ -1,7 +1,7 @@
 package thoughtworks
 
-import com.sun.org.apache.bcel.internal.generic.RETURN
 
+// redundant code
 fun sum(till: Int): Int {
     var sum = 0
     (1..till).forEach { i -> sum += i }
@@ -45,6 +45,7 @@ fun <T, R> withLogger(function: (T) -> R): (T) -> R = { t ->
     r
 }
 
+
 /* Use compose 
 fun workflow(validator, transformer, persister, data)
 {
@@ -53,6 +54,18 @@ fun workflow(validator, transformer, persister, data)
    val result = persister(transformed)
     
 }
+
+//dependancy
+fun checkAlreadyExists(getExistingItems, item){
+ val items = getExistingItems()
+ return items.contains(item)
+}
+
+//lazy
+fun checkAlreadyExistsOnlyIfNew(getExistingItems, item){
+  return if(item.status == new)  getExistingItems().contains(item) else true
+}
+
 
 */
 fun main() {
