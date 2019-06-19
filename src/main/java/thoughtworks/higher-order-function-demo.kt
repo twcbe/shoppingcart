@@ -45,6 +45,16 @@ fun <T, R> withLogger(function: (T) -> R): (T) -> R = { t ->
     r
 }
 
+/* Use compose 
+fun workflow(validator, transformer, persister, data)
+{
+   val validated =  validator(data)
+   val transformed = transformer(transformer)
+   val result = persister(transformed)
+    
+}
+
+*/
 fun main() {
     functionReferencesExample("JournalDev.com", ::printFunction)
 }
