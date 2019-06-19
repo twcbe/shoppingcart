@@ -106,9 +106,7 @@ fun getItem(
     userSelectedProduct: UserSelectedProduct
 ): Item {
 
-    val unitPrice = if (userSelectedProduct.product.isBook())
-        userSelectedProduct.product.price + bookPriceCalculator(userSelectedProduct.bookInfo!!)
-    else userSelectedProduct.product.price
+    val unitPrice = getUnitPrice(bookPriceCalculator, userSelectedProduct)
 
     val price = getTotalPrice(
         unitPrice,
@@ -118,6 +116,12 @@ fun getItem(
     return Item(userSelectedProduct.product, userSelectedProduct.quantity, price)
 
 }
+
+fun getUnitPrice(bookPriceCalculator: (BookInfo) -> Double, userSelectedProduct: UserSelectedProduct) =
+    if (userSelectedProduct.product.isBook())
+        userSelectedProduct.product.price + bookPriceCalculator(userSelectedProduct.bookInfo!!)
+    else userSelectedProduct.product.price
+
 
 fun getTotalPrice(unitPrice: Double, quantity: Int) = unitPrice * quantity
 
