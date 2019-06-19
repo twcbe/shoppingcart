@@ -55,8 +55,9 @@ fun main() {
 
     val bookPriceCalculator = getBookPriceCalculator(bookPrices)
 
-    val taxCalculator =
-        { category: String, price: Double -> (::getTax andThen ::calculatePrice.curried()(price))(category) }
+    val taxCalculator = { category: String, price: Double ->
+        getPercentAndAmount(::getTax, ::calculatePrice.curried()(price))(category)
+    }
 
     val mapItem: (UserSelectedProduct) -> Item = getCartItemCurried(bookPriceCalculator)(taxCalculator)
 
@@ -67,6 +68,12 @@ fun main() {
     println("${order.grossAmount} ${order.netAmount}")
 
 }
+
+fun getPercentAndAmount(
+    getPercentage: (String) -> Double,
+    getAmount: (Double) -> Pair<Double, Double>
+): (String) -> Pair<Double, Double> =
+    getPercentage andThen getAmount
 
 tailrec fun getProductsFromUser(catalog: Collection<Product>, userProducts: Array<UserSelectedProduct>):
         Array<UserSelectedProduct> {
@@ -123,10 +130,9 @@ fun getItem(
     taxCalculator: (String, Double) -> Pair<Double, Double>,
     userSelectedProduct: UserSelectedProduct
 ): Item {
-    
-    val unitPrice = getUnitPrice(bookPriceCalculator, userSelectedProduct)
 
-    val price = getTotalPrice(unitPrice, userSelectedProduct.quantity)
+    val price = (::getUnitPrice.curried()(bookPriceCalculator) andThen
+            ::getTotalPrice.curried()(userSelectedProduct.quantity))(userSelectedProduct)
 
     val (priceWithTax, tax) = taxCalculator(userSelectedProduct.product.category, price)
 
@@ -139,7 +145,7 @@ fun getUnitPrice(bookPriceCalculator: (BookInfo) -> Double, userSelectedProduct:
         userSelectedProduct.product.price + bookPriceCalculator(userSelectedProduct.bookInfo!!)
     else userSelectedProduct.product.price
 
-fun getTotalPrice(unitPrice: Double, quantity: Int) = unitPrice * quantity
+fun getTotalPrice(quantity: Int, unitPrice: Double) = quantity * unitPrice
 
 fun getTax(category: String): Double = when (category) {
     Constants.Electronics -> 2.5
