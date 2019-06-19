@@ -1,0 +1,116 @@
+1.
+Concept: Data Class, Enum, Val, List, Map
+Represent Product Catlog
+    - Create a data class to hold product information
+    - Create a data structure to hold catalog (using on the class created before)
+    - Create a data structure to hold book prices based on book type and format
+
+2.1
+- Get Input for products, prompt user to enter productID
+- Continue to get products when user enter C, User enters X stop getting user input
+
+2.2
+Concept: Immutablility, Recursion, Extension Functions, Pure Functions, Side Effects, Pattern Matching
+Get Input From User
+    - Prompt user to enter multiple products. e.g. P1
+    - If the user selects a book, get book type and format as additional input
+    - Store the user selected products in a data structure
+
+3. Functions as Values, Collection.Map
+Create Item With Price
+    - Based on User selected products, calculate total price for each Item
+    e.g if the user has selected a book P5, with type Ebook and Format Kindle
+    then the price would be 100 + 100 = 200
+    - Tip: Create a data class to hold the Item
+
+4. Concept: Higher Order Functions, Closure -Create Item With Price Refactored
+Refactor getItem extract out the generic functions
+Refactor getItem with using HOF,
+Tip -1 Remove the bookPrices parameter from getItem
+Tip -2 Accept a new function with signature (BookInfo) -> Double, as a parameter, and use this function to  get AdditionalPrice
+Tip -3 Create a factory function that would return the bookPriceCalculatorFunction
+
+5. Concept: Currying and Partial Application (using library)
+Refactor the getBookPriceCalculator function using Currying the getAdditionalPriceForBook function
+
+6. Concept: More of Currying, Higher Order Functions, Extract Pure Functions, Tuple/ Pair Destructuring
+Calculate Tax
+
+7. Concept: Compoisiotn
+Refactor the taxCalculator parameter passed to getItem,
+Tip - Use the curried, compose function from the library to  build the taxCalculator Factory
+Tip - the factory function would take category and price and return the taxCalculator
+
+8. Create an Order with items, GrossAmount, GreenTax, NetAmount
+
+
+60       Kotlin Intro 
+        -----------------
+15        Th.Introduction to FP
+15        Th.Data & Functions - Separate (Contrast to OO)
+15        Data Class -  ?? Algebraic Data Types (Sum / Product)
+15        Collections *
+15        Immutablility
+        --------------------->1
+15        Recursion
+15        Pure Functions
+15        Side Effects
+        ---------------------->2.1
+10       Extension Methods *
+10       Pattern Matching
+        ---------------------->2.2
+20        Functions as First Class, val f = { }
+20        Lambda
+        ---------------------->3
+20      Higher Order Functions - functions taking functions
+20      Higher Order Functions - functions creating functions
+15        Closure
+15        Lazy Evaluations
+        ----------------------> 4
+20        Currying - How to curry multi arity funcitons
+20        Partial Application
+20        Introduce library
+        -----------------------> 5
+20        Discuss and Clarify Doubts
+        -----------------------> 6
+20        Function Composition
+15        Revisit to Higher Order Functions
+            Factory Functions (already seen -revise here)
+15        Introduce the Compose function of library
+        ------------------------->7
+30        Revisit
+15        Collections and its Operations Reduce
+        --------------------------->8
+30       Q.A
+
+
+Revamp -
+Evaluation 1: Extension on next day with item wise discount and total discount
+Create 1 branch per user and push wit specific commit messge "Submit"
+Discuss and Clarify
+
+Evaluation 2: New Problem Statement, Namma Taxi / Whatever
+================================
+Execution Model per Group
+================================
+Introduce Concepts - Slide
+Show Code Samples - Slide
+Discuss about Why Where When WhenNot etc - Slide
+Rapid Q.A
+?? Real-Time Demo / Playground Practice (Online editor if needed)
+Handson Checkout code
+Checkout solution
+Discuss
+
+
+========================
+project team 
+
+
+
+
+
+
+
+
+
