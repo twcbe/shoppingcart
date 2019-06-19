@@ -123,21 +123,21 @@ fun getItem(
     taxCalculator: (String, Double) -> Pair<Double, Double>,
     userSelectedProduct: UserSelectedProduct
 ): Item {
+    
+    val unitPrice = getUnitPrice(bookPriceCalculator, userSelectedProduct)
 
-    val unitPrice = if (userSelectedProduct.product.isBook())
-        userSelectedProduct.product.price + bookPriceCalculator(userSelectedProduct.bookInfo!!)
-    else userSelectedProduct.product.price
-
-    val price = getTotalPrice(
-        unitPrice,
-        userSelectedProduct.quantity
-    )
+    val price = getTotalPrice(unitPrice, userSelectedProduct.quantity)
 
     val (priceWithTax, tax) = taxCalculator(userSelectedProduct.product.category, price)
 
     return Item(userSelectedProduct.product, userSelectedProduct.quantity, price, tax, priceWithTax)
 
 }
+
+fun getUnitPrice(bookPriceCalculator: (BookInfo) -> Double, userSelectedProduct: UserSelectedProduct) =
+    if (userSelectedProduct.product.isBook())
+        userSelectedProduct.product.price + bookPriceCalculator(userSelectedProduct.bookInfo!!)
+    else userSelectedProduct.product.price
 
 fun getTotalPrice(unitPrice: Double, quantity: Int) = unitPrice * quantity
 
