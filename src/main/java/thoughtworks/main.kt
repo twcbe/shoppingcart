@@ -40,8 +40,13 @@ fun main() {
 
 }
 
+<<<<<<< HEAD
 tailrec fun getCart(catalog: Collection<Product>, userProducts: Array<CartItem>):
         Array<CartItem> {
+=======
+tailrec fun getCart(catalog: Collection<Product>, userProducts: Array<UserSelectedProduct>):
+        Array<UserSelectedProduct> {
+>>>>>>> rename to cart
 
     val updatedCart = arrayOf(
         *(userProducts),
@@ -50,7 +55,11 @@ tailrec fun getCart(catalog: Collection<Product>, userProducts: Array<CartItem>)
     return if (isUserRequireMoreProducts()) getCart(catalog, updatedCart) else updatedCart
 }
 
+<<<<<<< HEAD
 fun getCartItem(catalog: Collection<Product>): CartItem {
+=======
+fun getCartItem(catalog: Collection<Product>): UserSelectedProduct {
+>>>>>>> rename to cart
     val product = getProduct(catalog, promptUser("Enter the product id wish for", catalog.map {
         it.id
     }))
