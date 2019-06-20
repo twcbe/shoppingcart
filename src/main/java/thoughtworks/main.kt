@@ -47,11 +47,11 @@ fun main() {
 
     val userSelectedProducts = getProductsFromUser(catalog, emptyArray())
 
-    val getCartItemCurried = ::getItem.curried()
+    val getItemCurried = ::getItem.curried()
 
     val bookPriceCalculator = getBookPriceCalculator(bookPrices)
 
-    val mapItem: (UserSelectedProduct) -> Item = getCartItemCurried(bookPriceCalculator)
+    val mapItem: (UserSelectedProduct) -> Item = getItemCurried(bookPriceCalculator)
 
     val items = userSelectedProducts.map(mapItem)
 
