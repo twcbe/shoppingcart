@@ -21,7 +21,7 @@ data class Item(
 
 data class BookInfo(val bookType: String, val format: String)
 
-data class UserSelectedProduct(val product: Product, val quantity: Int, val bookInfo: BookInfo? = null)
+data class CartItem(val product: Product, val quantity: Int, val bookInfo: BookInfo? = null)
 
 
 fun main() {
@@ -45,34 +45,34 @@ fun main() {
         BookInfo(Constants.Paperback, Constants.Softcover) to 100.00
     )
 
-    val userSelectedProducts = getProductsFromUser(catalog, emptyArray())
+    val cart = getCart(catalog, emptyArray())
 
-    val getCartItemCurried = ::getItem.curried()
+    val getItemCurried = ::getItem.curried()
 
     val bookPriceCalculator = getBookPriceCalculator(bookPrices)
 
-    val mapItem: (UserSelectedProduct) -> Item = getCartItemCurried(bookPriceCalculator)
+    val mapItem: (CartItem) -> Item = getItemCurried(bookPriceCalculator)
 
-    val items = userSelectedProducts.map(mapItem)
+    val items = cart.map(mapItem)
 
 
 }
 
-tailrec fun getProductsFromUser(catalog: Collection<Product>, userProducts: Array<UserSelectedProduct>):
-        Array<UserSelectedProduct> {
+tailrec fun getCart(catalog: Collection<Product>, userProducts: Array<CartItem>):
+        Array<CartItem> {
 
     val updatedUserProducts = arrayOf(
         *(userProducts),
-        getUserSelectedProduct(catalog)
+        getCartItem(catalog)
     )
-    return if (isUserRequireMoreProducts()) getProductsFromUser(catalog, updatedUserProducts) else updatedUserProducts
+    return if (isUserRequireMoreProducts()) getCart(catalog, updatedUserProducts) else updatedUserProducts
 }
 
-fun getUserSelectedProduct(catalog: Collection<Product>): UserSelectedProduct {
+fun getCartItem(catalog: Collection<Product>): CartItem {
     val product = getProduct(catalog, promptUser("Enter the product id wish for", catalog.map {
         it.id
     }))
-    return UserSelectedProduct(product, 1, if (product.isBook()) getBookInfo() else null)
+    return CartItem(product, 1, if (product.isBook()) getBookInfo() else null)
 }
 
 fun Product.isBook() = this.category == "Book"
@@ -110,7 +110,7 @@ tailrec fun promptUser(prompt: String = "", validValues: List<String> = emptyLis
 
 fun getItem(
     bookPriceCalculator: (BookInfo) -> Double,
-    userSelectedProduct: UserSelectedProduct
+    userSelectedProduct: CartItem
 ): Item {
 
     val unitPrice = if (userSelectedProduct.product.isBook())
