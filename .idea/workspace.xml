@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3834910-fc2c-4dcc-b377-3ce40e6cd2e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/thoughtworks/higher-order-function-demo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thoughtworks/higher-order-function-demo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thoughtworks/lambda-closure-demo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thoughtworks/lambda-closure-demo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thoughtworks/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thoughtworks/main.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,32 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="168" column="4" selection-start-line="168" selection-start-column="4" selection-end-line="168" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#70#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shape-demo.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/shape-demo.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="higher-order-function-demo.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/higher-order-function-demo.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+            <state relative-caret-position="1665">
+              <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
             </state>
           </provider>
         </entry>
@@ -48,32 +29,8 @@
       <file leaf-file-name="lambda-closure-demo.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/lambda-closure-demo.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="currying-partial-application-demo.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/currying-partial-application-demo.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="12" />
-              <folding>
-                <element signature="e#22#87#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="compose-demo.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/compose-demo.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="30" />
-              <folding>
-                <element signature="e#22#90#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -85,20 +42,12 @@
       </file>
       <file leaf-file-name="CollectionsKt.class" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.2.0/kotlin-stdlib-1.2.0.jar!/kotlin/collections/CollectionsKt.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="295" column="56" selection-start-line="295" selection-start-column="56" selection-end-line="295" selection-end-column="56" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="_Collections.kt" pinned="false" current-in-tab="false">
         <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/common/generated/_Collections.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="1800" column="41" selection-start-line="1800" selection-start-column="41" selection-end-line="1800" selection-end-column="41" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -128,12 +77,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/thoughtworks/main.kt" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/thoughtworks/main.kt" />
         <option value="$PROJECT_DIR$/src/main/java/thoughtworks/shape-demo.kt" />
         <option value="$PROJECT_DIR$/src/main/java/thoughtworks/compose-demo.kt" />
         <option value="$PROJECT_DIR$/src/main/java/thoughtworks/currying-partial-application-demo.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/thoughtworks/lambda-closure-demo.kt" />
         <option value="$PROJECT_DIR$/src/main/java/thoughtworks/higher-order-function-demo.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/thoughtworks/lambda-closure-demo.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/thoughtworks/main.kt" />
       </list>
     </option>
   </component>
@@ -144,23 +93,29 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="shoppingcart" type="b2602c69:ProjectViewProjectNode" />
               <item name="shoppingcart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shoppingcart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingcart" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shoppingcart" type="b2602c69:ProjectViewProjectNode" />
@@ -196,6 +151,28 @@
             </path>
             <path>
               <item name="shoppingcart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="shoppingcart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="KotlinJavaRuntime" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="shoppingcart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="KotlinJavaRuntime" type="70bed36:NamedLibraryElementNode" />
+              <item name="kotlin-stdlib.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shoppingcart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="KotlinJavaRuntime" type="70bed36:NamedLibraryElementNode" />
+              <item name="kotlin-stdlib.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shoppingcart" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
             <path>
@@ -207,7 +184,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -320,7 +297,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
@@ -342,48 +319,60 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27682403" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="DB Browser" order="2" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2067239" />
-      <window_info anchor="right" id="REPL" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Console" order="7" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info id="Job Explorer" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info id="Project Explorer" order="2" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="right" id="Cargo" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info id="Capture Tool" order="3" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="UI Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20958512" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32948717" />
-      <window_info anchor="right" id="Leiningen" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info id="Designer" order="3" />
+      <window_info anchor="right" id="Leiningen" order="4" />
+      <window_info anchor="right" id="REPL" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="bottom" id="Console" order="9" />
+      <window_info anchor="bottom" id="DB Execution Console" order="7" />
+      <window_info id="Designer" order="5" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="DB Browser" order="2" />
+      <window_info anchor="right" id="Cargo" order="5" />
+      <window_info id="Project Explorer" order="3" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info id="UI Designer" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Job Explorer" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2067239" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32948717" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Leiningen" order="8" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
+      <window_info anchor="right" id="REPL" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -394,23 +383,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoppingcart.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/shoppingcart/BookInfo.class" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -465,9 +437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1845">
           <caret line="123" column="22" lean-forward="true" selection-start-line="123" selection-start-column="22" selection-end-line="123" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -475,9 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -513,9 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -523,9 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -561,9 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
           <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -571,9 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -609,9 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -619,9 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -660,30 +608,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="168" column="4" selection-start-line="168" selection-start-column="4" selection-end-line="168" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/lambda-closure-demo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/currying-partial-application-demo.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="12" />
-          <folding>
-            <element signature="e#22#87#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -691,9 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="30" />
-          <folding>
-            <element signature="e#22#90#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -701,6 +626,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/common/generated/_Collections.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.2.0/kotlin-stdlib-1.2.0.jar!/kotlin/collections/CollectionsKt.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.kts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/lambda-closure-demo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1665">
+          <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
         </state>
       </provider>
     </entry>

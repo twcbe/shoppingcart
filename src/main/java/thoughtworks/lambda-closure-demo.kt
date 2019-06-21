@@ -3,8 +3,10 @@ package thoughtworks
 val square = { number: Int -> number * number }
 val nine = square(3)  //returns an Integer
 
-val that: (Int) -> Int = { three -> three }
+val that= { three: Int -> three }
+
 val more: (String, Int) -> String = { str, int -> str + int }
+
 val noReturn: (Int) -> Unit = { num -> println(num) }
 
 fun myFunction(): () -> Unit {

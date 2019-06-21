@@ -24,7 +24,7 @@ data class Item(
 
 data class BookInfo(val bookType: String, val format: String)
 
-data class UserSelectedProduct(val product: Product, val quantity: Int, val bookInfo: BookInfo? = null)
+data class CartItem(val product: Product, val quantity: Int, val bookInfo: BookInfo? = null)
 
 data class Order(val items: List<Item>, val grossAmount: Double, val greenTax: Double, val netAmount: Double)
 
@@ -49,9 +49,9 @@ fun main() {
         BookInfo(Constants.Paperback, Constants.Softcover) to 100.00
     )
 
-    val userSelectedProducts = getProductsFromUser(catalog, emptyArray())
+    val cart = getCart(catalog, emptyArray())
 
-    val getCartItemCurried = ::getItem.curried()
+    val getItemCurried = ::getItem.curried()
 
     val bookPriceCalculator = getBookPriceCalculator(bookPrices)
 
@@ -59,9 +59,9 @@ fun main() {
         getPercentAndAmount(::getTax, ::calculatePrice.curried()(price))(category)
     }
 
-    val mapItem: (UserSelectedProduct) -> Item = getCartItemCurried(bookPriceCalculator)(taxCalculator)
+    val mapItem: (CartItem) -> Item = getItemCurried(bookPriceCalculator)(taxCalculator)
 
-    val items = userSelectedProducts.map(mapItem)
+    val items = cart.map(mapItem)
 
     val order = createOrder(items)
 
@@ -75,28 +75,28 @@ fun getPercentAndAmount(
 ): (String) -> Pair<Double, Double> =
     getPercentage andThen getAmount
 
-tailrec fun getProductsFromUser(catalog: Collection<Product>, userProducts: Array<UserSelectedProduct>):
-        Array<UserSelectedProduct> {
+tailrec fun getCart(catalog: Collection<Product>, userProducts: Array<CartItem>):
+        Array<CartItem> {
 
     val updatedUserProducts = arrayOf(
         *(userProducts),
         getUserSelectedProduct(catalog)
     )
-    return if (isUserRequireMoreProducts()) getProductsFromUser(catalog, updatedUserProducts) else updatedUserProducts
+    return if (doesUserRequireMoreProducts()) getCart(catalog, updatedUserProducts) else updatedUserProducts
 }
 
-fun getUserSelectedProduct(catalog: Collection<Product>): UserSelectedProduct {
+fun getUserSelectedProduct(catalog: Collection<Product>): CartItem {
     val product = getProduct(catalog, promptUser("Enter the product id wish for", catalog.map {
         it.id
     }))
-    return UserSelectedProduct(product, 1, if (product.isBook()) getBookInfo() else null)
+    return CartItem(product, 1, if (product.isBook()) getBookInfo() else null)
 }
 
 fun Product.isBook() = this.category == "Book"
 
 fun getProduct(catalog: Collection<Product>, productId: String) = catalog.first { it.id == productId }
 
-fun isUserRequireMoreProducts(): Boolean =
+fun doesUserRequireMoreProducts(): Boolean =
     promptUser("Enter C to add more products, X to Complete", listOf("C", "X")) == "C"
 
 tailrec fun getBookInfo(): BookInfo =
@@ -128,7 +128,7 @@ tailrec fun promptUser(prompt: String = "", validValues: List<String> = emptyLis
 fun getItem(
     bookPriceCalculator: (BookInfo) -> Double,
     taxCalculator: (String, Double) -> Pair<Double, Double>,
-    userSelectedProduct: UserSelectedProduct
+    userSelectedProduct: CartItem
 ): Item {
 
     val price = (::getUnitPrice.curried()(bookPriceCalculator) andThen
@@ -140,7 +140,7 @@ fun getItem(
 
 }
 
-fun getUnitPrice(bookPriceCalculator: (BookInfo) -> Double, userSelectedProduct: UserSelectedProduct) =
+fun getUnitPrice(bookPriceCalculator: (BookInfo) -> Double, userSelectedProduct: CartItem) =
     if (userSelectedProduct.product.isBook())
         userSelectedProduct.product.price + bookPriceCalculator(userSelectedProduct.bookInfo!!)
     else userSelectedProduct.product.price
