@@ -14,12 +14,21 @@ fun product(till: Int): Int {
     return product
 }
 
+fun noredundancy(till: Int, init: Int, action: (Int, Int) -> Int): Int {
+    var sumOrProduct = init
+    (1..till).forEach { i -> action(sumOrProduct, i) }
+    return sumOrProduct
+}
+
 fun onRange(till: Int, init: Int, action: (Int, Int) -> Int): Int {
     return (1..till).fold(init, action) //acc,item
 }
 
 
-fun functionReferencesExample(str: String, expression: (String) -> Unit) {
+fun functionReferencesExample(
+    str: String,
+    expression: (String) -> Unit
+) {
     print("Welcome To Kotlin Series @")
     expression(str)
 }
@@ -28,6 +37,12 @@ fun printFunction(str: String) {
     println(str)
 }
 
+fun one(int: Int): Int = int + 1
+
+fun compute(one: (Int) -> Int) {
+
+
+}
 
 fun <T, R> logAndCall(function: (T) -> R, t: T): R {
     println("log start")
@@ -36,6 +51,24 @@ fun <T, R> logAndCall(function: (T) -> R, t: T): R {
     return r
 
 }
+
+
+//decorate
+fun withIntLogger(input: (Int) -> Int): (Int) -> Int =
+    { t ->
+        logAndCall(input, t)
+    }
+
+fun stupidFunction(input: (Int) -> Int): (Int) -> Int = input
+
+fun logInputFunction(input: (Int) -> Int): (Int) -> Int {
+
+    return fun(i: Int): Int {
+        //log -> input
+        return input(i)
+    }
+}
+
 
 //decorate
 fun <T, R> withLogger(function: (T) -> R): (T) -> R = { t ->
@@ -69,5 +102,11 @@ fun checkAlreadyExistsOnlyIfNew(getExistingItems, item){
 
 */
 fun main() {
+    val ret = withIntLogger(::one)
+
+    ret(100)
+
+    one(1)
+    logAndCall(::one, 1)
     functionReferencesExample("JournalDev.com", ::printFunction)
 }
