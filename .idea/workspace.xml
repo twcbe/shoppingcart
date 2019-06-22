@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3834910-fc2c-4dcc-b377-3ce40e6cd2e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thoughtworks/currying-partial-application-demo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thoughtworks/currying-partial-application-demo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thoughtworks/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thoughtworks/main.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1158">
-              <caret line="162" column="83" selection-start-line="162" selection-start-column="83" selection-end-line="162" selection-end-column="83" />
+            <state relative-caret-position="343">
+              <caret line="149" column="10" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="10" />
               <folding>
                 <element signature="e#0#70#0" expanded="true" />
               </folding>
@@ -28,43 +27,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lambda-closure-demo.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/lambda-closure-demo.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="higher-order-function-demo.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/higher-order-function-demo.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="52" column="1" lean-forward="true" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="compose-demo.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/compose-demo.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="36" />
+            <state relative-caret-position="216">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="11" />
               <folding>
                 <element signature="e#22#90#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="currying-partial-application-demo.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/currying-partial-application-demo.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#22#92#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,8 +42,8 @@
       <file leaf-file-name="NamespaceKt.class" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/funktionale/funktionale-all/1.2/funktionale-all-1.2.jar!/org/funktionale/currying/NamespaceKt.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -111,6 +80,7 @@
       <find>println</find>
       <find>order</find>
       <find>getItem</find>
+      <find>getTax</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,10 +93,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/thoughtworks/shape-demo.kt" />
         <option value="$PROJECT_DIR$/src/main/java/thoughtworks/compose-demo.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/thoughtworks/main.kt" />
         <option value="$PROJECT_DIR$/src/main/java/thoughtworks/higher-order-function-demo.kt" />
         <option value="$PROJECT_DIR$/src/main/java/thoughtworks/lambda-closure-demo.kt" />
         <option value="$PROJECT_DIR$/src/main/java/thoughtworks/currying-partial-application-demo.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/thoughtworks/main.kt" />
       </list>
     </option>
   </component>
@@ -386,7 +356,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.21538462" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20314735" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24248926" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.19555555" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="7" side_tool="true" />
@@ -428,7 +398,6 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="bottom" id="Console" order="9" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
       <window_info id="Designer" order="5" />
       <window_info anchor="right" id="Palette" order="4" />
@@ -449,6 +418,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info id="Job Explorer" order="4" />
       <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20958512" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32948717" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -456,7 +426,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Console" order="9" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
@@ -706,16 +676,6 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.kts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1158">
-          <caret line="162" column="83" selection-start-line="162" selection-start-column="83" selection-end-line="162" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/lambda-closure-demo.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -725,18 +685,8 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/funktionale/funktionale-all/1.2/funktionale-all-1.2.jar!/org/funktionale/currying/NamespaceKt.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/compose-demo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="36" />
-          <folding>
-            <element signature="e#22#90#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -753,6 +703,26 @@
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#22#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/compose-demo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="e#22#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="149" column="10" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
           </folding>
         </state>
       </provider>

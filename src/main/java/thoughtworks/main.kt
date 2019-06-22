@@ -147,11 +147,9 @@ fun getUnitPrice(bookPriceCalculator: (BookInfo) -> Double, userSelectedProduct:
 
 fun getTotalPrice(quantity: Int, unitPrice: Double) = quantity * unitPrice
 
-fun getTax(category: String): Double = when (category) {
-    Constants.Electronics -> 2.5
-    Constants.Book -> 0.5
-    else -> 0.0
-}
+fun getTax(category: String): Double =
+    mapOf(Constants.Book to 0.5, Constants.Electronics to 2.4)[category] ?: 0.0
+
 
 fun calculatePrice(price: Double, percentage: Double): Pair<Double, Double> {
     val percent = price * (percentage / 100)
