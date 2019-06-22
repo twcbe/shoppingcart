@@ -55,8 +55,12 @@ fun main() {
 
     val items = cart.map(mapItem)
 
+    val items1 = cart.map { getItem(bookPriceCalculator, it) }
+
 
 }
+
+
 
 tailrec fun getCart(catalog: Collection<Product>, userProducts: Array<CartItem>):
         Array<CartItem> {
@@ -110,19 +114,19 @@ tailrec fun promptUser(prompt: String = "", validValues: List<String> = emptyLis
 
 fun getItem(
     bookPriceCalculator: (BookInfo) -> Double,
-    userSelectedProduct: CartItem
+    cartItem: CartItem
 ): Item {
 
-    val unitPrice = if (userSelectedProduct.product.isBook())
-        userSelectedProduct.product.price + bookPriceCalculator(userSelectedProduct.bookInfo!!)
-    else userSelectedProduct.product.price
+    val unitPrice = if (cartItem.product.isBook())
+        cartItem.product.price + bookPriceCalculator(cartItem.bookInfo!!)
+    else cartItem.product.price
 
     val price = getTotalPrice(
         unitPrice,
-        userSelectedProduct.quantity
+        cartItem.quantity
     )
 
-    return Item(userSelectedProduct.product, userSelectedProduct.quantity, price)
+    return Item(cartItem.product, cartItem.quantity, price)
 
 }
 
