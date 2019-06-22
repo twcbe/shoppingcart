@@ -51,6 +51,7 @@ fun main() {
 
     val bookPriceCalculator = getBookPriceCalculator(bookPrices)
 
+
     val mapItem: (CartItem) -> Item = getItemCurried(bookPriceCalculator)
 
     val items = cart.map(mapItem)
@@ -59,7 +60,6 @@ fun main() {
 
 
 }
-
 
 
 tailrec fun getCart(catalog: Collection<Product>, userProducts: Array<CartItem>):

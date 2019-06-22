@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3834910-fc2c-4dcc-b377-3ce40e6cd2e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/thoughtworks/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thoughtworks/main.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,8 +18,8 @@
       <file leaf-file-name="main.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
+            <state relative-caret-position="-905">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
             </state>
           </provider>
         </entry>
@@ -299,7 +298,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.21538462" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08941345" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24248926" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.19555555" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="7" side_tool="true" />
@@ -650,8 +649,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/thoughtworks/main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
+        <state relative-caret-position="-905">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
